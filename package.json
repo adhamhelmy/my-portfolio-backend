@@ -8,11 +8,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "cd frontend2.0 && npm run build",
-    "install-frontend2.0": "cd frontend2.0 && npm install",
-    "heroku-postbuild": "npm run install-frontend2.0 && npm run build",
     "start": "node server.js",
-    "frontend2.0": "cd frontend2.0 && npm start",
     "dev": "concurrently -n 'server,frontend2.0' -c 'red,green'  \"nodemon server.js\" \"npm run frontend2.0\""
   },
   "keywords": [],
