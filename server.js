@@ -26,7 +26,8 @@ connection.once('open', ()=> {
         console.log(error)
     }
 });
-const projectsRouter = require('./backend/api/projects.route');
+
+const projectsRouter = require('./api/projects.route.js');
 app.use("/api/v1/projects", projectsRouter)
 
 if(process.env.NODE_ENV=== 'production') {
@@ -38,7 +39,7 @@ app.use(express.static(__dirname + '/public'))
 app.get('/*', function (req, res){
     //res.json(__dirname)
     
-    res.sendFile(path.join(__dirname, 'frontend2.0/public/index.html'))
+    res.sendFile(path.join(__dirname, '../frontend2.0/public/index.html'))
   })
 
   
